@@ -49,12 +49,12 @@ import {IHangar18} from "./interfaces/core/IHangar18.sol";
 import {ICygnusTerminal} from "./interfaces/core/ICygnusTerminal.sol";
 import {ICygnusNebulaRegistry} from "./interfaces/core/ICygnusNebulaRegistry.sol";
 import {IGammaProxy, IHypervisor} from "./interfaces/IHypervisor.sol";
-import {IUniswapV3Pool} from "./interfaces/IUniswapV3Pool.sol";
+import {IAlgebraPool} from "./interfaces/IAlgebraPool.sol";
 
-/// @title UniswapV3Harvester
+/// @title QuickswapHarvester
 /// @author CygnusDAO
-/// @notice Harvester for Gamma UniswapV3 pools with masterchef
-contract UniswapV3Harvester is CygnusHarvester {
+/// @notice Harvester fo quickswap pools
+contract QuickswapHarvester is CygnusHarvester {
     /*  ═══════════════════════════════════════════════════════════════════════════════════════════════════════ 
             1. LIBRARIES
         ═══════════════════════════════════════════════════════════════════════════════════════════════════════  */
@@ -74,7 +74,7 @@ contract UniswapV3Harvester is CygnusHarvester {
     /**
      *  @inheritdoc ICygnusHarvester
      */
-    string public override name = "Cygnus: UniswapV3 Harvester (Hypervisor)";
+    string public override name = "Cygnus: Quickswap Harvester (Hypervisor)";
 
     /*  ═══════════════════════════════════════════════════════════════════════════════════════════════════════ 
             3. CONSTRUCTOR
@@ -113,7 +113,7 @@ contract UniswapV3Harvester is CygnusHarvester {
         uint256 decimalsDenominator = scalarDifference > 1e12 ? 1e6 : scalarDifference;
 
         // Get sqrt price from Algebra pool
-        (uint256 sqrtPriceX96, , , , , , ) = IUniswapV3Pool(IHypervisor(lpTokenPair).pool()).slot0();
+        (uint256 sqrtPriceX96, , , , , , ) = IAlgebraPool(IHypervisor(lpTokenPair).pool()).globalState();
 
         // Convert to price with scalar diff and denom to take into account decimals of tokens
         uint256 price = ((sqrtPriceX96 ** 2 * (scalarDifference / decimalsDenominator)) / (2 ** 192)) * decimalsDenominator;
@@ -274,16 +274,13 @@ contract UniswapV3Harvester is CygnusHarvester {
                     );
                 }
                 // token is wantToken, add to `wantAmount`
-                else liquidity += finalAmount;
+                else liquidity += amounts[i];
             }
 
             unchecked {
                 ++i;
             }
         }
-
-        // Escape
-        if (liquidity == 0) revert("Insufficient want");
 
         // ─────────────────────── 4. Convert amount received of wantToken to liquidity
         // Tokens of underlying

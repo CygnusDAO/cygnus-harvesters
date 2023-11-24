@@ -1,45 +1,45 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "IUniswapV3Pool",
-  "sourceName": "contracts/cygnus-harvesters/interfaces/IHypervisor.sol",
+  "contractName": "IAlgebraPool",
+  "sourceName": "contracts/cygnus-harvesters/interfaces/IAlgebraPool.sol",
   "abi": [
     {
       "inputs": [],
-      "name": "slot0",
+      "name": "globalState",
       "outputs": [
         {
           "internalType": "uint160",
-          "name": "sqrtPriceX96",
+          "name": "",
           "type": "uint160"
         },
         {
           "internalType": "int24",
-          "name": "tick",
+          "name": "",
           "type": "int24"
         },
         {
           "internalType": "uint16",
-          "name": "observationIndex",
+          "name": "",
           "type": "uint16"
         },
         {
           "internalType": "uint16",
-          "name": "observationCardinality",
-          "type": "uint16"
-        },
-        {
-          "internalType": "uint16",
-          "name": "observationCardinalityNext",
+          "name": "",
           "type": "uint16"
         },
         {
           "internalType": "uint8",
-          "name": "feeProtocol",
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "",
           "type": "uint8"
         },
         {
           "internalType": "bool",
-          "name": "unlocked",
+          "name": "",
           "type": "bool"
         }
       ],

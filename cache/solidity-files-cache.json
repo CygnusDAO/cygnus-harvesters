@@ -763,8 +763,8 @@
       ]
     },
     "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/UniswapV3Harvester.sol": {
-      "lastModificationDate": 1700853027927,
-      "contentHash": "8626076d16fed3e23946bb791b8ecf76",
+      "lastModificationDate": 1700854209254,
+      "contentHash": "b30bdf3862c590392e3a8110f51c524d",
       "sourceName": "contracts/cygnus-harvesters/UniswapV3Harvester.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -815,7 +815,8 @@
         "./interfaces/core/IHangar18.sol",
         "./interfaces/core/ICygnusTerminal.sol",
         "./interfaces/core/ICygnusNebulaRegistry.sol",
-        "./interfaces/IHypervisor.sol"
+        "./interfaces/IHypervisor.sol",
+        "./interfaces/IUniswapV3Pool.sol"
       ],
       "versionPragmas": [
         ">=0.8.17"
@@ -825,8 +826,8 @@
       ]
     },
     "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/interfaces/IHypervisor.sol": {
-      "lastModificationDate": 1700852990546,
-      "contentHash": "cfa3a0539c680b28fa79738c60074e9b",
+      "lastModificationDate": 1700854211551,
+      "contentHash": "245e326a9cce2b6c7e824e1d454bfcc1",
       "sourceName": "contracts/cygnus-harvesters/interfaces/IHypervisor.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -874,8 +875,7 @@
       ],
       "artifacts": [
         "IGammaProxy",
-        "IHypervisor",
-        "IUniswapV3Pool"
+        "IHypervisor"
       ]
     },
     "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/libraries/CygnusDexLib.sol": {
@@ -982,6 +982,121 @@
       ],
       "artifacts": [
         "IUniswapV3Pool"
+      ]
+    },
+    "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/QuickswapHarvester.sol": {
+      "lastModificationDate": 1700854182424,
+      "contentHash": "7b43d53f208e21f4e82ee5c70e02a641",
+      "sourceName": "contracts/cygnus-harvesters/QuickswapHarvester.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000,
+            "details": {
+              "peephole": true,
+              "inliner": true,
+              "jumpdestRemover": true,
+              "orderLiterals": true,
+              "deduplicate": true,
+              "cse": true,
+              "constantOptimizer": true,
+              "yulDetails": {
+                "stackAllocation": true,
+                "optimizerSteps": "dhfoDgvulfnTUtnIf[xa[r]EscLMcCTUtTOntnfDIulLculVcul[j]Tpeulxa[rul]xa[r]cLgvifCTUca[r]LSsTOtfDnca[r]Iulc]jmul[jul]VcTOculjmul"
+              }
+            }
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./CygnusHarvester.sol",
+        "./utils/ReentrancyGuard.sol",
+        "./libraries/SafeTransferLib.sol",
+        "./libraries/FixedPointMathLib.sol",
+        "./interfaces/core/IERC20.sol",
+        "./interfaces/core/IHangar18.sol",
+        "./interfaces/core/ICygnusTerminal.sol",
+        "./interfaces/core/ICygnusNebulaRegistry.sol",
+        "./interfaces/IHypervisor.sol",
+        "./interfaces/IAlgebraPool.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17"
+      ],
+      "artifacts": [
+        "QuickswapHarvester"
+      ]
+    },
+    "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/interfaces/IAlgebraPool.sol": {
+      "lastModificationDate": 1700854210121,
+      "contentHash": "5dc8446230b7395ebffbfb978e2dd768",
+      "sourceName": "contracts/cygnus-harvesters/interfaces/IAlgebraPool.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000,
+            "details": {
+              "peephole": true,
+              "inliner": true,
+              "jumpdestRemover": true,
+              "orderLiterals": true,
+              "deduplicate": true,
+              "cse": true,
+              "constantOptimizer": true,
+              "yulDetails": {
+                "stackAllocation": true,
+                "optimizerSteps": "dhfoDgvulfnTUtnIf[xa[r]EscLMcCTUtTOntnfDIulLculVcul[j]Tpeulxa[rul]xa[r]cLgvifCTUca[r]LSsTOtfDnca[r]Iulc]jmul[jul]VcTOculjmul"
+              }
+            }
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17"
+      ],
+      "artifacts": [
+        "IAlgebraPool"
       ]
     }
   }
