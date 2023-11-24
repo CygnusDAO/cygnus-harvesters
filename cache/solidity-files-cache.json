@@ -984,10 +984,62 @@
         "IUniswapV3Pool"
       ]
     },
-    "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/QuickswapHarvester.sol": {
-      "lastModificationDate": 1700854182424,
-      "contentHash": "7b43d53f208e21f4e82ee5c70e02a641",
-      "sourceName": "contracts/cygnus-harvesters/QuickswapHarvester.sol",
+    "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/interfaces/IAlgebraPool.sol": {
+      "lastModificationDate": 1700854210121,
+      "contentHash": "5dc8446230b7395ebffbfb978e2dd768",
+      "sourceName": "contracts/cygnus-harvesters/interfaces/IAlgebraPool.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "viaIR": true,
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000,
+            "details": {
+              "peephole": true,
+              "inliner": true,
+              "jumpdestRemover": true,
+              "orderLiterals": true,
+              "deduplicate": true,
+              "cse": true,
+              "constantOptimizer": true,
+              "yulDetails": {
+                "stackAllocation": true,
+                "optimizerSteps": "dhfoDgvulfnTUtnIf[xa[r]EscLMcCTUtTOntnfDIulLculVcul[j]Tpeulxa[rul]xa[r]cLgvifCTUca[r]LSsTOtfDnca[r]Iulc]jmul[jul]VcTOculjmul"
+              }
+            }
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17"
+      ],
+      "artifacts": [
+        "IAlgebraPool"
+      ]
+    },
+    "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/AlgebraHarvester.sol": {
+      "lastModificationDate": 1700854483445,
+      "contentHash": "d6cd27cb4207e6c8bc6146eb505e1451",
+      "sourceName": "contracts/cygnus-harvesters/AlgebraHarvester.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -1044,59 +1096,7 @@
         ">=0.8.17"
       ],
       "artifacts": [
-        "QuickswapHarvester"
-      ]
-    },
-    "/home/sorrowlol/Desktop/core-harvesters/contracts/cygnus-harvesters/interfaces/IAlgebraPool.sol": {
-      "lastModificationDate": 1700854210121,
-      "contentHash": "5dc8446230b7395ebffbfb978e2dd768",
-      "sourceName": "contracts/cygnus-harvesters/interfaces/IAlgebraPool.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "viaIR": true,
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000000,
-            "details": {
-              "peephole": true,
-              "inliner": true,
-              "jumpdestRemover": true,
-              "orderLiterals": true,
-              "deduplicate": true,
-              "cse": true,
-              "constantOptimizer": true,
-              "yulDetails": {
-                "stackAllocation": true,
-                "optimizerSteps": "dhfoDgvulfnTUtnIf[xa[r]EscLMcCTUtTOntnfDIulLculVcul[j]Tpeulxa[rul]xa[r]cLgvifCTUca[r]LSsTOtfDnca[r]Iulc]jmul[jul]VcTOculjmul"
-              }
-            }
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.8.17"
-      ],
-      "artifacts": [
-        "IAlgebraPool"
+        "AlgebraHarvester"
       ]
     }
   }

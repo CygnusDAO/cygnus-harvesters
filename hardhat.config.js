@@ -2,7 +2,6 @@
 const path = require("path");
 
 require("@nomicfoundation/hardhat-chai-matchers");
-require("@nomicfoundation/hardhat-ledger");
 require("@nomicfoundation/hardhat-verify");
 require("hardhat-contract-sizer");
 

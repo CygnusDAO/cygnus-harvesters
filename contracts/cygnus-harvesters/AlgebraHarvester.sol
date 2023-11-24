@@ -51,10 +51,10 @@ import {ICygnusNebulaRegistry} from "./interfaces/core/ICygnusNebulaRegistry.sol
 import {IGammaProxy, IHypervisor} from "./interfaces/IHypervisor.sol";
 import {IAlgebraPool} from "./interfaces/IAlgebraPool.sol";
 
-/// @title QuickswapHarvester
+/// @title AlgebraHarvester
 /// @author CygnusDAO
-/// @notice Harvester fo quickswap pools
-contract QuickswapHarvester is CygnusHarvester {
+/// @notice Harvester fo algebra pools
+contract AlgebraHarvester is CygnusHarvester {
     /*  ═══════════════════════════════════════════════════════════════════════════════════════════════════════ 
             1. LIBRARIES
         ═══════════════════════════════════════════════════════════════════════════════════════════════════════  */
@@ -74,7 +74,7 @@ contract QuickswapHarvester is CygnusHarvester {
     /**
      *  @inheritdoc ICygnusHarvester
      */
-    string public override name = "Cygnus: Quickswap Harvester (Hypervisor)";
+    string public override name = "Cygnus: Algebra Harvester (Hypervisor)";
 
     /*  ═══════════════════════════════════════════════════════════════════════════════════════════════════════ 
             3. CONSTRUCTOR
