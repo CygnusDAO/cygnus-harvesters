@@ -142,6 +142,9 @@ contract CompoundHarvester is CygnusHarvester {
             }
         }
 
+        /// Revert if no liquidity to reinvest
+        if (liquidity == 0) revert("Insufficient want");
+
         // ─────────────────────── 5. Reinvest Rewards
         // Reinvest rewards in core, minting 0 shares and increasing totalBalance.
         ICygnusTerminal(harvester.terminal).reinvestRewards_y7b(liquidity);

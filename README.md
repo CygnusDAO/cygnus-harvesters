@@ -39,7 +39,7 @@ To swap all tokens with 1inch the contract uses 1Inch swap's legacy method.
         /// @custom:error SrcTokenNotValid Avoid swapping anything but the harvested token
         if (address(desc.srcToken) != srcToken) revert CygnusHarvester__SrcTokenNotValid();
 
-        /// @custom;error DstTokenNotValid Avoid swapping to anything but the harvester's want token
+        /// @custom:error DstTokenNotValid Avoid swapping to anything but the harvester's want token
         if (address(desc.dstToken) != dstToken) revert CygnusHarvester__DstTokenNotValid();
 
         /// @custom:error DstReceiverNotValid Avoid swapping to anyone but the harvester's receiver address

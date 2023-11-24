@@ -282,7 +282,7 @@ contract UniswapV3Harvester is CygnusHarvester {
             }
         }
 
-        // Escape
+        /// Revert if no liquidity to reinvest
         if (liquidity == 0) revert("Insufficient want");
 
         // ─────────────────────── 4. Convert amount received of wantToken to liquidity

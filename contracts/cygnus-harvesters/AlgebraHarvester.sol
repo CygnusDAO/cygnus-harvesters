@@ -274,13 +274,16 @@ contract AlgebraHarvester is CygnusHarvester {
                     );
                 }
                 // token is wantToken, add to `wantAmount`
-                else liquidity += amounts[i];
+                else liquidity += finalAmount;
             }
 
             unchecked {
                 ++i;
             }
         }
+
+        /// Revert if no liquidity to reinvest
+        if (liquidity == 0) revert("Insufficient want");
 
         // ─────────────────────── 4. Convert amount received of wantToken to liquidity
         // Tokens of underlying
