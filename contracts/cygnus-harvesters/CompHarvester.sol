@@ -49,7 +49,7 @@ import {ICygnusTerminal} from "./interfaces/core/ICygnusTerminal.sol";
 
 /// @title CompoundHarvester
 /// @author CygnusDAO
-/// @notice CompoundHarvester fo quickswap pools
+/// @notice Harvester for COMP pools
 contract CompoundHarvester is CygnusHarvester {
     /*  ═══════════════════════════════════════════════════════════════════════════════════════════════════════ 
             1. LIBRARIES
